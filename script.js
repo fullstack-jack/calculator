@@ -31,5 +31,16 @@ const operate = (num1, num2, op) => {
             divide(num1, num2)
             break
     }
-
 }
+
+const screen = document.querySelector(".screen")
+const buttons = document.querySelectorAll("button")
+
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+
+        
+        screen.textContent += e.target.textContent
+
+    })
+})
